@@ -1,0 +1,157 @@
+# Problem 1
+# 화면에 환영 메시지를 출력하는 코드입니다.
+print("Welcome to today's English lesson!")
+
+# Problem 2
+print("Jeonghyu Park")
+print("English Education")
+print("Social Studies")
+
+# Problem 3
+fav_word = input("What is your favorite English word? ")
+print("Your favorite word is:", fav_word)
+
+# Problem 4
+word = input("Enter an English word: ")
+meaning = input("Enter its meaning: ")
+print(word, "means", meaning)
+
+# Problem 5
+word = "friend"
+part_of_speech = "noun"
+meaning = "친구"
+print(f"{word} ({part_of_speech}): {meaning}")
+
+# Problem 6
+quiz1_score = 85
+quiz2_score = 92
+total = quiz1_score + quiz2_score
+print("Total:", total)
+
+# Problem 7
+average = (quiz1_score + quiz2_score) / 2
+print("Average:", average)
+python
+# Problem 8
+word1 = "apple"
+word2 = "elephant"
+print("Length difference:", len(word1) - len(word2))
+
+# Problem 9
+def double_score(score):
+    return score * 2
+
+print(double_score(10))
+print(double_score(35))
+print(double_score(7.5))
+
+# Problem 10
+def to_percentage(correct, total):
+    return correct / total * 100
+
+print(to_percentage(8, 10))
+print(to_percentage(15, 20))
+
+# Problem 11
+def is_longer(word1, word2):
+    return len(word1) > len(word2)
+
+print(is_longer("banana", "kiwi"))
+print(is_longer("cat", "elephant"))
+
+# Problem 12
+import random
+
+greetings = ["Hello!", "Hi there!", "Good morning!"]
+print(random.choice(greetings))
+
+# Problem 13
+import random
+
+mystery_number = random.randint(1, 100)
+print(mystery_number)
+
+# Problem 14
+def make_flashcard(word, meaning):
+    return word + " -> " + meaning
+
+print(make_flashcard("apple", "사과"))
+print(make_flashcard("book", "책"))
+
+# Problem 15
+correct = int(input("Number correct: "))
+total = int(input("Total questions: "))
+percentage = correct / total * 100
+
+if percentage >= 60:
+    print("Pass")
+else:
+    print("Fail")
+python
+# Problem 16
+def pass_or_fail(percentage):
+    if percentage >= 60:
+        return "Pass"
+    else:
+        return "Fail"
+
+print(pass_or_fail(85))
+print(pass_or_fail(60))
+print(pass_or_fail(42))
+python
+# Problem 17
+words = ["apple", "book", "friend"]
+
+for w in words:
+    print(w, "-", len(w), "letters")
+
+# Problem 18
+import random
+
+words = ["apple", "book", "friend", "school", "happy"]
+
+def pick_random_word(word_list):
+    return random.choice(word_list)
+
+print(pick_random_word(words))
+
+# Problem 19
+question_word = "apple"
+correct_meaning = "사과"
+
+def check_answer(user_answer, correct_answer):
+    return user_answer.strip().lower() == correct_answer.strip().lower()
+
+user_answer = input(f"What is the meaning of '{question_word}'? ")
+
+if check_answer(user_answer, correct_meaning):
+    print("Correct!")
+else:
+    print("Try again!")
+
+# Problem 20
+import random
+
+word_list = ["apple", "book", "friend", "school", "happy"]
+meaning_list = ["사과", "책", "친구", "학교", "행복한"]
+
+def check_answer(user_answer, correct_answer):
+    return user_answer.strip().lower() == correct_answer.strip().lower()
+
+score = 0
+total_questions = 3
+
+for i in range(total_questions):
+    index = random.randint(0, len(word_list) - 1)
+    word = word_list[index]
+    meaning = meaning_list[index]
+
+    user_answer = input(f"What is the meaning of '{word}'? ")
+
+    if check_answer(user_answer, meaning):
+        print("Correct!")
+        score += 1
+    else:
+        print("Wrong! The answer is", meaning)
+
+print(f"Final score: {score}/{total_questions}")
