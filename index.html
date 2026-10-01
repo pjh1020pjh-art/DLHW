@@ -50,14 +50,16 @@
 
         function checkAnswer(answer) {
 
+            var feedback = document.getElementById("feedback");
+
             if (answer === "Ascribe to") {
-                document.getElementById("feedback").innerText =
-                    "Correct! Well done!";
+                feedback.innerText = "잘했어!";
+                feedback.style.color = "olive";
             }
 
             else {
-                document.getElementById("feedback").innerText =
-                    "Incorrect. The answer is Ascribe to.";
+                feedback.innerText = "Incorrect. The answer is Ascribe to.";
+                feedback.style.color = "black";
             }
 
         }
